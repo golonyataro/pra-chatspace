@@ -1,5 +1,50 @@
-%body
-  .message-index
-    .left-contents
-      
-    .right-contents
+.message-index
+  .left-contents
+    .left-contents__top
+      %p chatspace
+      = link_to "#", class: "icon" do
+        %i.fas.fa-cog
+      = link_to "#", class: "icon" do
+        %i.fas.fa-edit
+    .left-contents__bottom
+      .group-lists
+        .group-list
+          %p.group sample group
+          %p.text sample text
+        .group-list
+          %p.group sample group
+          %p.text sample text
+        .group-list
+          %p.group sample group
+          %p.text sample text      
+  .right-contents
+    .right-contents__top
+      .right-contents__top__left
+        %p.current-group current-group
+        %p.current-group-member member
+      .right-contents__top__right
+        = link_to "Edit", "#", class: "edit-btn"
+    .right-contents__middle
+      .message-contents
+        .message-content
+          .message-content--top
+            .user-name
+              %p test-user
+            .created-at
+              %p 2000/02/24
+          .text
+            %p こんにちは！
+          .message-content
+          .message-content--top
+            .user-name
+              %p test-user
+            .created-at
+              %p 2000/02/24
+          .text
+            %p こんにちは！
+    .right-contents__bottom
+      %input{class: "form", placeholder: "本文"}
+      %label{for: "file-form"}
+        %input{class: "file-form", id: "file-form", type: "file"}
+        %i.far.fa-image.fa-lg
+      %input{class: "send-btn", type: "submit", value: "Send"}
