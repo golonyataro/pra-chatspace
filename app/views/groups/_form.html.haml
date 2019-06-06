@@ -1,0 +1,18 @@
+= form_for group do |f|
+  .group__form
+    .group__form__left
+      %label グループ名
+    .group__form__right
+      = f.text_field :name
+  .group__form
+    .group__form__left
+      %label チャットメンバーを追加
+    .group__form__right
+      %input
+  .group__form
+    .group__form__left
+      %label チャットメンバー
+    .group__form__right
+      = f.collection_check_boxes :user_ids, User.all, :id, :name
+  .group__form__btn
+    = f.submit class: "form-btn"
