@@ -1,0 +1,39 @@
+.group{
+  h1{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 40px 0;
+  }
+  &__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    &__right{
+      input{
+        width: 400px;
+        height: 50px;
+      }
+    }
+    &__left{
+      width: 250px;
+      text-align: right;
+      margin-right: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  &__form__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form-btn{
+      background: $light_blue;
+      color: $white;
+      padding: 10px 250px;
+      margin-top: 50px;
+      border: 1px solid $light_blue;
+    }
+  }
+}
